@@ -1,0 +1,13 @@
+body{
+    background-color: #2f2f2f;
+    
+}
+
+body .title{
+    color: azure;
+}
+.panel{
+    background-color: aliceblue;
+    margin: 1vw;
+    padding: 1vw;
+}
