@@ -18,5 +18,23 @@ h5{
 }
 
 .control input[type="radio"]{
-    margin: 0.5em
+    margin-bottom: 10px;
+}
+
+.notification-container {
+    align-items: center;
+    text-align: center;
+}
+
+.notification {
+    font-size: 1em;
+    opacity: 0;
+    width: 100%;
+    word-wrap: break-word;
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
 }
