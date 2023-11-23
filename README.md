@@ -1,6 +1,6 @@
 # Simulateur CEA
 
-This is a simulation tool built with HTML and Bulma CSS for calculating financial parameters based on user input. The tool is designed to help users estimate the optimum investment amount in CEA (Célibataire et Enfants à Charge) and provides various financial parameters as output.
+This is a simulation tool built with HTML and Bulma CSS for calculating financial parameters based on user input. The tool is designed to help users estimate the optimum investment amount in CEA and provides various financial parameters as output.
 
 ## How to Use
 
