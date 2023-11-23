@@ -1,13 +1,33 @@
-body{
-    background-color: #2f2f2f;
-    
+* {
+  margin: 0;
 }
 
-body .title{
-    color: azure;
+body {
+  background-color: #2f2f2f;
 }
-.panel{
-    background-color: aliceblue;
-    margin: 1vw;
-    padding: 1vw;
+
+body .title {
+  color: azure;
+}
+
+.panel {
+  background-color: aliceblue;
+  margin: 1vw;
+  padding: 3%;
+}
+
+.panel p {
+  color: black;
+}
+
+.container{
+    width: 100%;
+}
+
+.label{
+    text-transform: uppercase;
+}
+
+select{
+    width: 100%;
 }
