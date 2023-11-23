@@ -4,116 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bulma CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-    <!-- Custom CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="./style.css">
-
-    <!-- Title -->
-    <title>CEA</title>
-
+    <title>Simulateur CEA</title>
 </head>
 
 <body>
     <section class="section">
         <div class="container">
-            <h1 class="title">
-                Simulateur CEA
-            </h1>
+            <h4 class="title is-4 has-text-weight-bold py-3 mb-4">
+                <span class="has-text-grey-light">Simulateur CEA</span>
+            </h4>
             <div class="columns">
-                <div class="column is-three-fifths panel">
-                    <div class="columns">
-                        <div class="column is-three-fifths">
-                            <!-- Box -->
-                            <div class="box">
-                                <p class="title is-6">Paramètres d'entrée</p>
-                            </div>
-
-                            <!-- Field 1 -->
-                            <div class="field">
-                                <label class="label">Situation Familiale :</label>
-                                <div class="select is-fullwidth">
-                                    <select>
-                                        <option selected disabled>Situation Familiale</option>
-                                        <option>Marié</option>
-                                        <option>Célibataire</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Field 2 -->
-                            <div class="field">
-                                <label class="label">Enfants en charge :</label>
-                                <div class="select is-fullwidth">
-                                    <select>
-                                        <option selected disabled>Enfants en charge</option>
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4+</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                             <!-- Field 3 -->
-                             <div class="field">
-                                <label class="label">Parent en charge :</label>
-                                <div class="select is-fullwidth">
-                                    <select>
-                                        <option selected disabled>Parent en charge</option>
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                             <!-- Field 4 -->
-                             <div class="field">
-                                <label class="label">Enfant(s) infirme :</label>
-                                <div class="select is-fullwidth">
-                                    <select>
-                                        <option selected disabled>Enfant(s) infirme :</option>
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4+</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                              <!-- Field 5 -->
-                              <div class="field">
-                                <label class="label">Enfant(s) poursuivant des études supérieures sans bénéfice de bourse et agé de moins de 25 ans :</label>
-                                <div class="select is-fullwidth">
-                                    <select>
-                                        <option selected disabled>Enfant(s) poursuivant...</option>
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4+</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
+                <div class="column is-8">
+                    <div class="card mb-6">
+                        <div class="card-header">
+                            <h5 class="is-size-5 mb-2">Paramètres d'entrée</h5>
                         </div>
-                        <div class="column">
-                            <img src="money.png" alt="">
+                        <div class="card-content">
+                            <form>
+                                <div class="field">
+                                    <label class="label">Situation familiale</label>
+                                    <div class="control">
+                                        <div class="select">
+                                            <select id="situation">
+                                                <option value="M">Marié</option>
+                                                <option value="C">Célibataire</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Enfants en charge</label>
+                                    <div class="control">
+                                        <div class="select">
+                                            <select id="enf_en_charge">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4+">4+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Parents à charge</label>
+                                    <div class="control">
+                                        <div class="select">
+                                            <select id="par_a_charge">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Enfant(s) infirme</label>
+                                    <div class="control">
+                                        <input class="input" type="number" id="enf_infirme" min="0" max="20" step="1">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Enfant(s) poursuivant des études supérieures sans bénéfice de
+                                        bourse et agé de moins de 25 ans :</label>
+                                    <div class="control">
+                                        <div class="select">
+                                            <select id="enf_sans_bourse">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4+">4+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Revenu annuel imposable</label>
+                                    <div class="control">
+                                        <input class="input" type="tel" id="revenu" placeholder="DT">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Montant que vous voulez investir</label>
+                                    <div class="control">
+                                        <input class="input" type="tel" id="montant_op" placeholder="DT">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button value="Stimuler" class="button is-primary" onclick="run()">Stimuler</button>
                         </div>
                     </div>
                 </div>
-                <div class="column panel">
-                    Second column
+
+                <div class="column">
+                    <div class="card mb-6">
+                        <div class="card-header">
+                            <h5 class="is-size-5 mb-2">Paramètres de sortie</h5>
+                        </div>
+                        <div class="card-content">
+                            <form>
+                                <div class="field">
+                                    <label class="label">Montant optimum à investir en CEA</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="val1" disabled placeholder="DT">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Revenu annuel net imposable</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="val2" disabled placeholder="DT">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Impot du avant CEA</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="val3" disabled placeholder="DT">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Impot du apres CEA</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="val4" disabled placeholder="DT">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Gain d'impot annuel</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="val5" disabled placeholder="DT">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Gain d'impot mensuel</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="val6" disabled placeholder="DT">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Gain d'impot en %</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="val7" disabled placeholder="DT">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>

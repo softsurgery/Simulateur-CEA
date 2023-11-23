@@ -1,33 +1,18 @@
-* {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 body {
-  background-color: #2f2f2f;
+    background-color: #050505;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-body .title {
-  color: azure;
-}
-
-.panel {
-  background-color: aliceblue;
-  margin: 1vw;
-  padding: 3%;
-}
-
-.panel p {
-  color: black;
-}
-
-.container{
-    width: 100%;
-}
-
-.label{
-    text-transform: uppercase;
-}
-
-select{
-    width: 100%;
+h5{
+    padding: 20px;
 }
