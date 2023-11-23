@@ -16,3 +16,7 @@ body {
 h5{
     padding: 20px;
 }
+
+.control input[type="radio"]{
+    margin: 0.5em
+}
