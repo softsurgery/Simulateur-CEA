@@ -78,7 +78,9 @@ function run() {
     !enf_en_charge ||
     !par_a_charge ||
     !enf_infirme ||
-    !enf_sans_bourse
+    !enf_sans_bourse ||
+    !revenu ||
+    !montant_op
   ) {
     showNotification("Veuillez sélectionner toutes les options.");
     return false;
