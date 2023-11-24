@@ -33,16 +33,16 @@ h5 {
 }
 
 .notification {
-  border: 3px solid #ffcbcb;
-  border-radius: 0.2em;
   font-size: 1.4em;
   opacity: 0;
   width: 100%;
   word-wrap: break-word;
   padding: 10px;
+  border: 3px solid #ffcbcb;
+  border-radius: 0.2em;
   transition: opacity 0.3s ease-in-out;
 }
 
 .notification.show {
-  opacity: 1;
+  opacity: 0.9;
 }

@@ -121,7 +121,6 @@ function run() {
   }
 
   val1.value = Math.min(montant55, 100000).toFixed(3) + " DT";
-  val1.value += " DT";
   val2.value += " DT";
   val3.value += " DT";
   val4.value += " DT";
